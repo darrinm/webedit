@@ -1,0 +1,50 @@
+{
+  "name": "webedit",
+  "displayName": "Local Web Edit",
+  "description": "Edit web page content via WebSocket",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.startLocalWebEdit"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.startLocalWebEdit",
+        "title": "Start Local Web Edit"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.1",
+    "@types/ws": "^8.5.12",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "eslint": "^9.9.1",
+    "typescript": "^5.5.4",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "publisher": "DarrinMassena",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darrinm/vscode-local-web-edit.git"
+  },
+  "license": "MIT"
+}
