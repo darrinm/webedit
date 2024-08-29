@@ -2,7 +2,7 @@
   "name": "webedit",
   "displayName": "Local Web Edit",
   "description": "Edit web page content via WebSocket",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -18,6 +18,10 @@
       {
         "command": "extension.startLocalWebEdit",
         "title": "Start Local Web Edit"
+      },
+      {
+        "command": "extension.stopLocalWebEdit",
+        "title": "Stop Local Web Edit"
       }
     ]
   },
