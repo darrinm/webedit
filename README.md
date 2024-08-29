@@ -1,24 +1,24 @@
 # Local Web Edit
 
-This Visual Studio Code extension allows you to edit the contents of a web page text area that are communicated to/from the extension via a WebSocket. The web server is assumed to be running locally.
+This Visual Studio Code extension allows you to edit the Javascript of Hatch components. The Hatch web server is assumed to be running locally.
 
 ## Features
 
 - Start a WebSocket server on port 3000
-- Receive content from a web page and open it in a new editor
-- Send updates back to the web page as you edit the content in VS Code
+- Receive per-object Javascript and open it in a new editor
+- Send changes to Hatch as you edit the content in VS Code
+- Receive changes from Hatch as you edit the Javascript there
 
 ## Usage
 
-1. Install the extension
-2. Run the command "Start Local Web Edit" from the Command Palette (Ctrl+Shift+P)
-3. Connect to the WebSocket server from your web page (ws://localhost:3000)
-4. Send and receive content between your web page and VS Code
+1. Install the extension `webedit-<version>.vsix`
+2. Run the command "Start Local Web Edit" from the Visual Studio Code Command Palette (Ctrl+Shift+P)
+3. In Hatch (this , running on localhost, click on objects with Javascript to edit
 
 ## Requirements
 
 - Visual Studio Code 1.60.0 or higher
-- A local web server running your web page
+- Hatch
 
 ## Extension Settings
 
@@ -26,10 +26,13 @@ This extension doesn't contribute any settings.
 
 ## Known Issues
 
-None at the moment.
+- VSCode intellisense is a mixed blessing. It complains a lot and wants to autocomplete inappropiately.
+- No @mention support.
+- Files are presented as "unsaved" even though they are autosaved as they are changed.
+- No way to initiate adding Javascript to an object from VSCode.
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.2
 
-Initial release of Local Web Edit.
+It works!
