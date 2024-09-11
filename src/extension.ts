@@ -30,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
           const document = await vscode.workspace.openTextDocument(
             vscode.Uri.parse(`untitled:${title}`),
           );
-          const editor = await vscode.window.showTextDocument(document);
+          const editor = await vscode.window.showTextDocument(document, { preview: true });
           ignoreChanges = false;
 
           // Replace the content of the document with the content received from the browser.

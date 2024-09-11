@@ -2,7 +2,7 @@
   "name": "webedit",
   "displayName": "Local Web Edit",
   "description": "Edit web page content via WebSocket",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.60.0"
   },
